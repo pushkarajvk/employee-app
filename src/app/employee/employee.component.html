@@ -1,0 +1,56 @@
+<header class="header">
+  <h2>Employee List</h2>
+</header>
+<div
+  *ngIf="!previousEmployees.length && !currentEmployees.length"
+  class="empty-img"
+>
+  <img src="../assets/noData.png" />
+</div>
+
+<div *ngIf="currentEmployees.length">
+  <div class="padding10">
+    <span class="employee-title">Current Employees </span>
+  </div>
+  <div class="list-div">
+    <div *ngFor="let element of currentEmployees" class="list-item">
+      <div class="data-section">
+        <span class="displayBlock">{{ element.name }}</span>
+        <span class="displayBlock sub-heading">{{ element.role }}</span>
+        <span class="displayBlock sub-heading"
+          >From {{ element.fromDate }}</span
+        >
+      </div>
+      <div class="floatRight">
+        <a (click)="editEmployeeData(element)" matTooltip="Edit">
+          <mat-icon class="edit-icon">edit</mat-icon>
+        </a>
+        <a (click)="deleteEmployeeData(element)"  matTooltip="Delete">
+          <mat-icon class="delete-icon">delete</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="previousEmployees.length">
+  <div class="padding10">
+    <span class="employee-title">Previous Employees </span>
+  </div>
+  <div class="list-div">
+    <div *ngFor="let element of previousEmployees" class="list-item">
+      <div class="data-section">
+        <span class="displayBlock">{{ element.name }}</span>
+        <span class="displayBlock sub-heading">{{ element.role }}</span>
+        <span class="displayBlock sub-heading">
+          {{ element.fromDate }} - {{ element.toDate }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-div">
+  <a class="add-btn" (click)="onAddClick()">
+    <p-button icon="pi pi-plus"></p-button>
+  </a>
+</div>
