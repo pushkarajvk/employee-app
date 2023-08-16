@@ -1,0 +1,56 @@
+.employee-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2196f3;
+}
+
+.list-div {
+  height: 40vh;
+  overflow: auto;
+}
+
+.list-item {
+  padding: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  height: 70px;
+}
+
+.data-section {
+  float: left;
+  width: 80%;
+}
+
+.sub-heading {
+  font-size: 10px;
+  color: grey;
+}
+
+.bottom-div {
+  text-align: right;
+  margin-right: 2%;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #e4e4e4;
+}
+
+.add-btn {
+  margin-right: 20px;
+}
+
+.empty-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.edit-icon {
+  color: #2196f3;
+}
+
+.delete-icon {
+  color: #2196f3;
+}
